@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Pagination Component</title>
+
+    <style>
+      /*
+      SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+      FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+      */
+      /* 
+      MAIN COLOR: #08457f
+      GREY COLOR: #343a40
+      */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: #343a40;
+        line-height: 1;
+        display: flex;
+        justify-content: center;
+      }
+
+      .pagination {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 200px;
+      }
+
+      .btn {
+        border: 1px solid #08457f;
+        height: 48px;
+        width: 48px;
+        border-radius: 50%;
+        background: none;
+        cursor: pointer;
+      }
+
+      /* change colour of button (fill it) when hovering over it */
+      .btn:hover {
+        background-color: #08457f;
+      }
+
+      /* colour oif SVG icon */
+      .btn-icon {
+        height: 24px;
+        width: 24px;
+        stroke: #08457f;
+      }
+
+      .btn:hover .btn-icon {
+        /* change colour of the SVG icon when hovering over button */
+        stroke: #fff;
+      }
+
+
+      /* middle buttons */
+      .page-link:link,
+      .page-link:visited {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 18px;
+        color: #343a40;
+        text-decoration: none;
+        height: 36px;
+        width: 36px;
+        border-radius: 50%;
+        /* border: 1px solid #08457f; */
+      }
+
+      /* change colour of button (fill it) when hovering over it */
+      .page-link:hover,
+      .page-link:active,
+      .page-link.page-link--current {
+        background-color: #08457f;
+        color: #fff;
+      }
+
+      .dots {
+        color: #868e96;
+      }
+
+      
+    </style>
+  </head>
+  <body>
+    <div class="pagination">
+
+      <!-- Left Button -->
+      <button class="btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="btn-icon"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </button>
+
+      <!-- middle buttons -->
+      <a href="#" class="page-link">1</a>
+      <a href="#" class="page-link">2</a>
+      <!-- Current page - extra class -->
+      <a href="#" class="page-link page-link--current">3</a>
+      
+      <a href="#" class="page-link">4</a>
+      <a href="#" class="page-link">5</a>
+      <a href="#" class="page-link">6</a>
+      <!-- dots to show hidden pages -->
+      <span class="dots">...</span>
+
+      <!-- last page -->
+      <a href="#" class="page-link">23</a>
+      
+      <!-- Right button -->
+      <button class="btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="btn-icon"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 5l7 7-7 7"
+          />
+        </svg>
+      </button>
+
+    </div>
+  </body>
+</html>
